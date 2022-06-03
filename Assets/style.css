@@ -1,0 +1,89 @@
+:root {
+    --primarily-color: #E4DDD8;
+    --secondary-color: #DCCECA;
+    --CTA-color: rgb(0,0,0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:10px;
+    font-family: Inter, Sans-Serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width:100vw;
+    height:100vh;
+}
+
+.wallpaper {
+    background-color: var(--primarily-color);
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+header {
+    width:10rem;
+    height:100%;
+    background-color: var(--secondary-color);
+    position:fixed;
+}
+
+header > nav {
+    margin-top:5rem;
+
+}
+.menu {
+    list-style-type: none;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-decoration: none;
+    text-align:center;
+   
+}
+svg {
+    width:50%;
+    height:100px;
+}
+
+.main-content {
+    margin-left:10rem;
+    width: auto;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    padding: 4rem 5rem 5rem 5rem;
+}
+
+.main-heading {
+    font-size:10rem;
+    font-style:italic;
+    font-weight:300;
+}
+
+.calendar-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items: space-between;
+}
+.month {
+    height:10%;
+    align-self:flex-end;
+    width:15%;
+    background-color: white;
+    font-size:3.5rem;
+    text-align:center;
+    font-weight:100;
+    padding:2rem;
+}
+
+.calendar {
+    background-color: var(--secondary-color);
+    height:600px;
+}
