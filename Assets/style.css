@@ -2,6 +2,7 @@
     --primarily-color: #E4DDD8;
     --secondary-color: #DCCECA;
     --CTA-color: rgb(0,0,0);
+    --third-color:#D49A84;
 }
 
 * {
@@ -23,6 +24,7 @@ body{
     width:100%;
     height:100%;
     position:relative;
+    z-index: -3;
 }
 
 header {
@@ -51,6 +53,26 @@ svg {
     height:100px;
 }
 
+#ball {
+    width:600px;
+    height:600px;
+    background-color:var(--third-color);
+    border-radius: 100%;
+    position:absolute;
+    right:0;
+    z-index:-2;
+}
+#ball-2 {
+    width:300px;
+    height:300px;
+    background-color: #4F3832;
+    border-radius: 100%;
+    position:absolute;
+    right:13rem;
+    top:18rem;
+    z-index:-1;
+}
+
 .main-content {
     margin-left:10rem;
     width: auto;
@@ -67,7 +89,7 @@ svg {
     font-weight:300;
 }
 
-.calendar-wrapper{
+.calendar-wrapper {
     display:flex;
     flex-direction:column;
     align-items: space-between;
@@ -81,9 +103,68 @@ svg {
     text-align:center;
     font-weight:100;
     padding:2rem;
+    
 }
 
 .calendar {
     background-color: var(--secondary-color);
     height:600px;
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-auto-rows: 120px;
 }
+
+.calendar > div {
+    background-color:white;
+    /* margin-right:.5rem;
+    margin-top:.5rem; */
+    display:flex;
+    flex-direction:column;
+    padding: .8rem;
+    border:.1rem solid var(--secondary-color);
+
+}
+
+.calendar > div:hover {
+    color:var(--primarily-color);
+    background-color: black;
+    border:.5rem solid var(--third-color);
+}
+.calendar > div:hover .details-btn {
+    color:black;
+}
+
+.day-heading {
+    display:flex;
+    justify-content: space-between;
+    height:30%;
+}
+.day-name {
+    font-size:1.8rem;
+    font-weight:300;
+}
+.day-number {
+    font-size:1.8rem;
+    font-weight:300;
+}
+.project-details{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.details {
+    font-size:2rem;
+    font-weight:350;
+}
+
+.details-btn {
+    color:grey;
+    border:none;
+    outline:none;
+    margin-top:1.2rem;
+    width:50%;
+    padding:.5rem;
+    font-size:1.5rem;
+    align-self: flex-start;
+}
+
